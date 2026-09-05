@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Commerce Gateway (ACG) — The Universal Protocol Adapter for Agentic Commerce</title>
+  <meta name="description" content="A merchant-side gateway that makes any Razorpay merchant instantly transactable by AI shopping agents across ACP, AP2, and x402 protocols with bounded cryptographic mandates, SHA-256 audit ledger, and circuit-breaker safety.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/landing.css">
+</head>
+<body>
+
+  <!-- Background Animated Lights -->
+  <div class="glow-sphere sphere-1"></div>
+  <div class="glow-sphere sphere-2"></div>
+  <div class="glow-sphere sphere-3"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-container glass-nav">
+    <div class="nav-content">
+      <div class="nav-brand">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">ACG Gateway</span>
+          <span class="track-tag">Razorpay Buildathon 2026</span>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#problem">The 2026 Problem</a>
+        <a href="#protocols">Protocols (ACP / AP2)</a>
+        <a href="#security">Zero-Trust Mandates</a>
+        <a href="#circuit-breaker">Circuit Breaker</a>
+        <a href="#growth">Growth Engine</a>
+        <a href="#architecture">Architecture</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="/console" class="btn btn-console-link">
+          <span>Launch Live Console</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <div class="badge-pill hero-badge">
+        <span class="pulsing-emerald"></span>
+        <span>Track 01 — AI Growth & Agentic Commerce</span>
+      </div>
+
+      <h1 class="hero-headline">
+        Make Any Razorpay Merchant <br>
+        <span class="gradient-text">Transactable by AI Agents.</span> <br>
+        Across Every Protocol.
+      </h1>
+
+      <p class="hero-subtext">
+        By 2026, agent payments fragmented across OpenAI/Stripe ACP, Google AP2, and Coinbase x402. 
+        <strong>Agent Commerce Gateway (ACG)</strong> provides an intelligent edge adapter that verifies signed spending mandates, protects against rogue agent loops with an automated circuit breaker, and maximizes cart value via headroom upsells.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="/console" class="btn btn-primary-glow btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Open Live Simulation Studio
+        </a>
+        <a href="#architecture" class="btn btn-secondary-glass btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          Explore Gateway Architecture
+        </a>
+      </div>
+
+      <!-- Trust Pillars / Metrics -->
+      <div class="hero-stats-grid">
+        <div class="stat-card glass-subcard">
+          <div class="stat-number">3 Dialects</div>
+          <div class="stat-label">ACP · AP2 · x402 Interoperability</div>
+        </div>
+        <div class="stat-card glass-subcard">
+          <div class="stat-number">100% Gated</div>
+          <div class="stat-label">HMAC-SHA256 Cryptographic Mandates</div>
+        </div>
+        <div class="stat-card glass-subcard">
+          <div class="stat-number">Immutable</div>
+          <div class="stat-label">SHA-256 Hash-Chained Audit Ledger</div>
+        </div>
+        <div class="stat-card glass-subcard">
+          <div class="stat-number">Zero-Loss</div>
+          <div class="stat-label">Circuit Breaker & Human-In-The-Loop</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 1: The Fragmentation Problem -->
+  <section id="problem" class="section-container">
+    <div class="section-header">
+      <div class="section-tag">The 2026 Crisis</div>
+      <h2>The Great Agent Protocol Fragmentation</h2>
+      <p class="section-description">
+        AI shopping agents are the new consumers. But they don't speak the same language. Integrating each one directly is an engineering nightmare for merchants.
+      </p>
+    </div>
+
+    <div class="fragmentation-grid">
+      <div class="frag-card glass-card">
+        <div class="frag-badge acp-badge">Dialect 01</div>
+        <h3>OpenAI / Stripe ACP</h3>
+        <p>Session-oriented cart construction and order handoff tokens. Requires multi-step conversational state management.</p>
+        <div class="frag-tag">ACP/1.0 Handshake</div>
+      </div>
+
+      <div class="frag-card glass-card">
+        <div class="frag-badge ap2-badge">Dialect 02</div>
+        <h3>Google AP2 Mandates</h3>
+        <p>Cryptographically signed, intent-based payment mandates. Atomic execution with public key verification.</p>
+        <div class="frag-tag">AP2/2.0-GoogleSpec</div>
+      </div>
+
+      <div class="frag-card glass-card">
+        <div class="frag-badge x402-badge">Dialect 03 (PoC)</div>
+        <h3>Coinbase x402 Micropayments</h3>
+        <p>Machine-to-machine HTTP 402 Payment Required challenges for granular catalog feeds and supplier insights.</p>
+        <div class="frag-tag">HTTP 402 Pay-Per-Query</div>
+      </div>
+    </div>
+
+    <div class="solution-bridge glass-card">
+      <div class="bridge-icon">⚡</div>
+      <div class="bridge-content">
+        <h3>How ACG Solves It At The Merchant's Edge</h3>
+        <p>
+          Instead of waiting for global standards to unify, ACG acts as an edge translation gateway in front of Razorpay test rails. Any agent connects in its native dialect — ACG bounds, verifies, explains, and settles the order seamlessly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Core Feature Suite -->
+  <section id="protocols" class="section-container">
+    <div class="section-header">
+      <div class="section-tag">Key Innovations</div>
+      <h2>Everything Built For Track 01</h2>
+      <p class="section-description">Every requirement fulfilled with zero compromises: explainable, bounded, and gated.</p>
+    </div>
+
+    <div class="features-grid">
+      
+      <!-- Feature 1: Dual Protocol Adapter -->
+      <div class="feature-box glass-card">
+        <div class="feature-icon-wrapper purple-glow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Universal Protocol Adapter</h3>
+        <p>Simultaneously exposes endpoints tailored for ACP sessions (`/api/protocols/acp`) and AP2 atomic mandates (`/api/protocols/ap2`) routing into the same unified Razorpay order settlement engine.</p>
+      </div>
+
+      <!-- Feature 2: Signed Spending Mandates -->
+      <div id="security" class="feature-box glass-card">
+        <div class="feature-icon-wrapper blue-glow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <h3>Cryptographic Mandate Authority</h3>
+        <p>Before any money moves, the agent must present a tamper-proof signed authorization token containing a hard spending cap, category whitelist, and TTL expiry.</p>
+      </div>
+
+      <!-- Feature 3: Hash-Chained Audit Ledger -->
+      <div class="feature-box glass-card">
+        <div class="feature-icon-wrapper emerald-glow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <h3>SHA-256 Hash-Chained Audit Ledger</h3>
+        <p>Every search, cart add, upsell, and payment gets cryptographically chained (`Hash_n = SHA256(data + Hash_n-1)`). Accompanied by full natural-language justifications for every verdict.</p>
+      </div>
+
+      <!-- Feature 4: Circuit Breaker -->
+      <div id="circuit-breaker" class="feature-box glass-card">
+        <div class="feature-icon-wrapper amber-glow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Circuit Breaker & Graceful HITL</h3>
+        <p>Out-of-bounds agent behavior (velocity spikes, cap breaches, unauthorized categories) trips the circuit breaker, cleanly pausing execution for Human-In-The-Loop approval instead of crashing.</p>
+      </div>
+
+      <!-- Feature 5: Growth Engine -->
+      <div id="growth" class="feature-box glass-card">
+        <div class="feature-icon-wrapper pink-glow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        </div>
+        <h3>Headroom Upsell Growth Engine</h3>
+        <p>Dynamically calculates unspent mandate budget headroom (`Cap - Subtotal`) and presents high-margin complementary add-ons that agents evaluate live, increasing merchant AOV.</p>
+      </div>
+
+      <!-- Feature 6: Auto-Generated MCP Manifest -->
+      <div class="feature-box glass-card">
+        <div class="feature-icon-wrapper cyan-glow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3>Auto-Generated MCP Discovery</h3>
+        <p>Any product added to the store instantly updates the agent-callable MCP discovery manifest at `/.well-known/agent-commerce.json` without any manual code redeployment.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive Visual Flow / Architecture -->
+  <section id="architecture" class="section-container">
+    <div class="section-header">
+      <div class="section-tag">System Architecture</div>
+      <h2>End-to-End Transaction Flow</h2>
+      <p class="section-description">How an autonomous agent traverses the ACG pipeline in milliseconds.</p>
+    </div>
+
+    <div class="architecture-diagram-card glass-card">
+      <div class="flow-steps-wrapper">
+        
+        <div class="flow-step">
+          <div class="step-badge">Step 1</div>
+          <div class="step-title">Autonomous Agent</div>
+          <p class="step-desc">Receives user budget & goal; acquires cryptographically signed mandate.</p>
+        </div>
+
+        <div class="flow-arrow">➔</div>
+
+        <div class="flow-step">
+          <div class="step-badge">Step 2</div>
+          <div class="step-title">ACG Adapter Edge</div>
+          <p class="step-desc">Translates ACP Cart or AP2 Mandate dialect into canonical gateway format.</p>
+        </div>
+
+        <div class="flow-arrow">➔</div>
+
+        <div class="flow-step">
+          <div class="step-badge">Step 3</div>
+          <div class="step-title">Security & Growth</div>
+          <p class="step-desc">Verifies signature & bounds, checks circuit breaker, triggers headroom upsell.</p>
+        </div>
+
+        <div class="flow-arrow">➔</div>
+
+        <div class="flow-step">
+          <div class="step-badge">Step 4</div>
+          <div class="step-title">Razorpay Rails</div>
+          <p class="step-desc">Creates Razorpay order, captures payment, appends block to SHA-256 ledger.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="cta-banner-section">
+    <div class="cta-card glass-card">
+      <div class="cta-badge">Ready For Judging</div>
+      <h2>Experience The Live ACG Gateway In Action</h2>
+      <p>Test autonomous buyer agent personas, trigger simulated adversarial breaches, review human-in-the-loop approvals, and inspect the cryptographic audit chain.</p>
+      <div class="cta-actions">
+        <a href="/console" class="btn btn-primary-glow btn-lg">
+          Launch Gateway Command Console
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <strong>Agent Commerce Gateway (ACG)</strong> · Razorpay AI Buildathon 2026 (Track 01)
+      </div>
+      <div class="footer-right">
+        <span>Settlement: Razorpay Test Mode</span> · 
+        <a href="/console">Command Console</a> · 
+        <a href="/.well-known/agent-commerce.json" target="_blank">MCP Schema</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

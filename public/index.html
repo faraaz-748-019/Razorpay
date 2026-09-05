@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Commerce Gateway (ACG) | Razorpay AI Buildathon 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Ambient background glow effects -->
+  <div class="glow-orb orb-primary"></div>
+  <div class="glow-orb orb-secondary"></div>
+  <div class="glow-orb orb-accent"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header glass-card">
+      <div class="header-brand">
+        <div class="logo-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Agent Commerce Gateway <span class="badge-acg">ACG 2026</span></h1>
+          <p class="subtitle">Razorpay AI Buildathon · Track 01 (AI Growth & Agentic Commerce)</p>
+        </div>
+      </div>
+
+      <div class="header-metrics">
+        <div class="metric-pill">
+          <span class="status-dot pulsing"></span>
+          <span class="metric-label">Gateway:</span>
+          <span class="metric-val text-accent">Active (Razorpay Test Mode)</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-label">Protocols:</span>
+          <span class="metric-val">ACP · AP2 · x402</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-label">Audit Chain:</span>
+          <span class="metric-val text-success" id="headerChainStatus">SHA-256 Validated</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Grid Layout -->
+    <main class="dashboard-grid">
+      
+      <!-- LEFT COLUMN: Buyer Agent Simulation Center -->
+      <section class="panel glass-card agent-control-panel">
+        <div class="panel-header">
+          <div class="title-with-icon">
+            <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 8V4m0 4a3 3 0 100 6 3 3 0 000-6zm0 6v6m-7-3a7 7 0 1114 0H5z"/>
+            </svg>
+            <h2>Autonomous Buyer Agent Studio</h2>
+          </div>
+          <span class="tag-badge live-tag">Live Agentic Loop</span>
+        </div>
+
+        <div class="agent-config-form">
+          <div class="form-group">
+            <label for="personaSelect">Select Autonomous Agent Persona & Protocol Dialect:</label>
+            <select id="personaSelect" class="form-input">
+              <option value="budget_cautious_acp">Claire (Cautious Budget-Shopper) — OpenAI / Stripe ACP Dialect</option>
+              <option value="deal_hunter_ap2">Hank (Deal-Hunter) — Google AP2 Cryptographic Mandate</option>
+              <option value="rogue_anomaly_breaker">Robin (Adversarial Agent) — Triggers Circuit Breaker Anomaly</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label for="budgetInput">Authorized Mandate Budget (INR ₹):</label>
+              <input type="number" id="budgetInput" class="form-input" value="1500" min="100" max="50000" step="50">
+            </div>
+            <div class="form-group flex-2">
+              <label for="goalInput">Agent Shopping Intent / Prompt:</label>
+              <input type="text" id="goalInput" class="form-input" value="Buy a high-rated tech or audio gift under budget">
+            </div>
+          </div>
+
+          <div class="action-buttons-group">
+            <button id="runSimBtn" class="btn btn-primary glow-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Launch Autonomous Agent Checkout
+            </button>
+            <button id="quickTestBreakerBtn" class="btn btn-warning-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              Simulate Cap Breach Anomaly
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Agent Execution Terminal / Stepper -->
+        <div class="terminal-container">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">agent-execution-runtime.log</span>
+            <span class="terminal-protocol" id="activeProtocolBadge">Dialect: OpenAI / Stripe ACP</span>
+          </div>
+          <div class="terminal-body" id="agentLogsTerminal">
+            <div class="terminal-line system-line">[00:00.000] ACG Ready. Select persona and launch simulation to watch live tool calling, mandate verification, and Razorpay test settlement.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN: Protocols & Circuit Breaker Review -->
+      <section class="panel glass-card operations-panel">
+        
+        <!-- Tab Navigation -->
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="tabAudit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Audit Chain Ledger (<span id="chainCountBadge">0</span>)
+          </button>
+          <button class="tab-btn" data-tab="tabCircuit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            Circuit Breaker & HITL (<span id="reviewCountBadge">0</span>)
+          </button>
+          <button class="tab-btn" data-tab="tabProtocols">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20M2 12h20"/></svg>
+            Protocol Inspector (ACP vs AP2 vs x402)
+          </button>
+          <button class="tab-btn" data-tab="tabCatalog">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18m-5 4a4 4 0 01-8 0"/></svg>
+            Merchant Catalog & Manifest
+          </button>
+        </div>
+
+        <!-- TAB 1: Audit Chain Ledger -->
+        <div class="tab-content active" id="tabAudit">
+          <div class="tab-subbar">
+            <div class="chain-meta">
+              <span>Cryptographic Chain Integrity:</span>
+              <button id="verifyChainBtn" class="btn btn-sm btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Verify SHA-256 Hashes
+              </button>
+            </div>
+            <div class="filter-group">
+              <select id="auditFilterProtocol" class="filter-select">
+                <option value="ALL">All Protocols</option>
+                <option value="ACP">ACP</option>
+                <option value="AP2">AP2</option>
+                <option value="x402">x402</option>
+                <option value="SYSTEM">SYSTEM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="audit-chain-list" id="auditChainContainer">
+            <!-- Dynamically populated hash blocks -->
+          </div>
+        </div>
+
+        <!-- TAB 2: Circuit Breaker & Human-In-The-Loop -->
+        <div class="tab-content" id="tabCircuit">
+          <div class="breaker-banner glass-subcard">
+            <div class="banner-icon">🛡️</div>
+            <div>
+              <h3>Zero-Trust Anomaly Protection Engine</h3>
+              <p>When an agent attempts a category breach, spending cap overrun, or abnormal velocity spike, the gateway pauses settlement and requests human authorization.</p>
+            </div>
+          </div>
+
+          <div class="pending-reviews-list" id="pendingReviewsContainer">
+            <div class="empty-state">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p>Circuit breaker is peaceful. No anomalous actions currently suspended.</p>
+              <span class="subtext">Run the "Rogue Anomaly Breaker" simulation to test live HITL pause and override.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: Protocol Inspector -->
+        <div class="tab-content" id="tabProtocols">
+          <div class="protocol-matrix">
+            <div class="protocol-card glass-subcard">
+              <div class="protocol-card-header">
+                <span class="proto-tag tag-acp">Dialect 01</span>
+                <h4>OpenAI / Stripe ACP</h4>
+              </div>
+              <p class="proto-desc">Session & cart-oriented handoff protocol. Agents construct line-items, receive intent payloads, and delegate final payment checkout.</p>
+              <div class="code-snippet">
+                <code>POST /api/protocols/acp/cart/:id/items<br>POST /api/protocols/acp/checkout</code>
+              </div>
+            </div>
+
+            <div class="protocol-card glass-subcard">
+              <div class="protocol-card-header">
+                <span class="proto-tag tag-ap2">Dialect 02</span>
+                <h4>Google AP2 Mandate</h4>
+              </div>
+              <p class="proto-desc">Cryptographically signed, intent-based payment mandates. Atomic execution with HMAC-SHA256 signature verification at the merchant edge.</p>
+              <div class="code-snippet">
+                <code>POST /api/protocols/ap2/intent/preflight<br>POST /api/protocols/ap2/mandate/execute</code>
+              </div>
+            </div>
+
+            <div class="protocol-card glass-subcard">
+              <div class="protocol-card-header">
+                <span class="proto-tag tag-x402">Dialect 03 (PoC)</span>
+                <h4>Coinbase x402 Micropayments</h4>
+              </div>
+              <p class="proto-desc">HTTP 402 machine-to-machine micropayment challenge-response for real-time inventory and supplier intelligence feeds.</p>
+              <div class="code-snippet">
+                <code>GET /api/protocols/x402/insights/realtime-stock<br>Header: X-402-Payment-Proof</code>
+              </div>
+            </div>
+          </div>
+
+          <div class="mcp-discovery-box glass-subcard">
+            <h4>Live Dynamic Agent Tool & Catalog Discovery (MCP Auto-Generated)</h4>
+            <p>Live schema auto-derived from merchant inventory at <code>/api/catalog/manifest</code> and <code>/.well-known/agent-commerce.json</code></p>
+            <pre class="json-code" id="mcpManifestViewer">Loading live tools manifest...</pre>
+          </div>
+        </div>
+
+        <!-- TAB 4: Merchant Catalog & Upsell Engine + Live Product Creation -->
+        <div class="tab-content" id="tabCatalog">
+          <div class="add-product-box glass-subcard">
+            <h4>Instant Agent-Readable SKU Provisioning</h4>
+            <p class="subtext">Add a new product to the merchant store; it will instantly appear in the live agent-readable MCP manifest without manual re-integration.</p>
+            <form id="addProductForm" class="form-row-wrap">
+              <input type="text" id="newProdName" class="form-input" placeholder="Product Name (e.g. Ergonomic Keyboard)" required>
+              <select id="newProdCat" class="form-input" required>
+                <option value="electronics">electronics</option>
+                <option value="accessories">accessories</option>
+                <option value="books">books</option>
+                <option value="lifestyle">lifestyle</option>
+              </select>
+              <input type="number" id="newProdPrice" class="form-input" placeholder="Price (INR ₹)" required min="10" step="10">
+              <input type="text" id="newProdDesc" class="form-input flex-2" placeholder="Description & agent tags" required>
+              <button type="submit" class="btn btn-primary btn-sm">+ Add SKU & Auto-Generate Manifest</button>
+            </form>
+          </div>
+
+          <div class="catalog-grid" id="catalogGrid">
+            <!-- Dynamically populated products -->
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Modal for Detailed Audit Block Inspection -->
+    <div class="modal-backdrop" id="blockModal" style="display:none;">
+      <div class="modal-card glass-card">
+        <div class="modal-header">
+          <h3 id="modalBlockTitle">Block Details</h3>
+          <button class="btn-close" id="closeModalBtn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <pre class="json-code" id="modalBlockContent"></pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
