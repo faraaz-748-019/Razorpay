@@ -139,7 +139,6 @@ Razorpay/
 ├── .gitignore                # Git exclusions (node_modules, logs, secrets)
 ├── package.json              # Project dependencies and test scripts
 ├── ARCHITECTURE.md           # Deep architectural analysis of ACG & Track 01 alignment
-├── PITCH_SCRIPT.md           # 5-minute video presentation script
 ├── public/
 │   ├── landing.html          # High-Impact Hero Landing Page for Judges & Merchants
 │   ├── index.html            # Glassmorphic Operations & Simulation Dashboard
